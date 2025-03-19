@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} Respon {% endblock %}
+{% block content%}
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4">
+                        <i class="fa-solid text-primary"></i> Kirimkan Feedback Anda
+                    </h3>
+                    <form action="/result" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Nama</label>
+                            <input type="text" class="form-control rounded-3" id="name" name="name" placeholder="Masukkan nama Anda">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="Masukkan email Anda">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Pesan</label>
+                            <textarea class="form-control rounded-3" id="message" name="message" rows="4" placeholder="Tulis pesan Anda"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-3 bg-success">
+                            <i class="fa-solid fa-paper-plane"></i> Kirim
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

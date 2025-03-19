@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %} Respon {% endblock %}
+{% block content%}
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4">
+                        <i class="fa-solid text-primary"></i> Login Form
+                    </h3>
+                    <form action="/input" method="POST">
+                        <div class="mb-3">
+                            <label for="username" class="form-label fw-bold">Username</label>
+                            <input type="text" class="form-control rounded-3" id="username" name="uname" placeholder="Masukkan username Anda">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-3 bg-success">
+                            <i class="fa-solid fa-paper-plane"></i> Kirim
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

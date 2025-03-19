@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kekayu</title>
+
+    <!-- MDB Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div id="sidebarMenu" class="bg-light position-fixed top-0 start-0 h-100 p-3" style="width: 250px; transform: translateX(-100%); transition: transform 0.3s;">
+    <h5 class="text-center text-success">Menu</h5>
+    <hr>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link text-success" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-success" href="/about"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-success" href="/respon"><i class="fas fa-envelope"></i> Respon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-success" href="/input"><i class="fas fa-address-card"></i> Input</a>
+      </li>
+
+    </ul>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Tombol untuk membuka dan menutup sidebar -->
+    <button class="btn btn-success p-2" id="sidebarToggle" style="width: 40px; height: 40px;"><i class="fas fa-bars"></i></button>
+    <a class="navbar-brand" href="#">Kekayu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/respon">Respon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/input">Input</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<!-- Footer -->
+<footer class="bg-body-tertiary text-center">
+  <div class="container p-4 pb-0">
+    <section class="mb-4">
+      <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#" role="button">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#" role="button">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#" role="button">
+        <i class="fab fa-google"></i>
+      </a>
+      <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#" role="button">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2025 Copyright:
+    <a class="text-body" href="https://mdbootstrap.com/">kekayu.com</a>
+  </div>
+</footer>
+
+<!-- Bootstrap & MDB JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+<script>
+    document.getElementById('sidebarToggle').addEventListener('click', function () {
+        let sidebar = document.getElementById('sidebarMenu');
+        sidebar.style.transform = sidebar.style.transform === 'translateX(0%)' ? 'translateX(-100%)' : 'translateX(0%)';
+    });
+</script>
+
+</body>
+</html>

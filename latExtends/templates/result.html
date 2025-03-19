@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} About {% endblock %}
+{% block content%}
+<table class="table table-striped">
+    {% for key,value in result.items() %}
+        <tr>
+            <th>{{key}}</th>
+            <th>{{value}}</th>
+        </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

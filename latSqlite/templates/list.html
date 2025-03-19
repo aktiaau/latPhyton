@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+    <h3>Informasi students</h3>
+    <table>
+        <thead>
+            <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>City</td>
+            <td>Pincode</td>
+            </tr>
+        </thead>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{row["name"]}}</td>
+            <td>{{row["address"]}}</td>
+            <td>{{row["city"]}}</td>
+            <td>{{row["pin"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<br>
+<a href="/">Go back to home page</a>
+</body>
+</html>
